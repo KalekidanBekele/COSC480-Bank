@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+		<link rel = "stylesheet" type = "text/css" href = "./style/signup.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+        <script src="https://kit.fontawesome.com/9a4c809e35.js" crossorigin="anonymous"></script>
+</head>
+		<nav class="navtop">
+			<div>
+            	<a href="/"><h1>BSU Bank</h1></a>
+				<a href="/login"><i class="fa-regular fa-user"></i>Log In</a>
+                <a href="/register"><i class="fa-solid fa-user-plus"></i>Sign Up</a>
+
+			</div>
+		</nav>
+        {{#if error}}
+		<div class="alert alert-danger">{{error}}</div>
+        {{/if}}
+<body>
+	<form action="/register" method="post">
+    <div class="login">
+    <h1>Sign Up</h1>
+          <center><p><b>Please fill in this form to create an account.</b></p></center>
+        <label for="firstname"><b>First Name</b></label>
+            <input type="text"  placeholder="Your First Name"id="firstName" name="firstName"><br><br>
+        <label for="lastname"><b>Last Name</b></label>
+            <input type="text" placeholder="Your Last Name" id="lastName" name="lastName"><br><br>
+        <label for="username"><b>Email</b></label>
+            <input type="text" placeholder="Email" id="email" name="email"><br><br>
+        <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Create Password" id="password" name="password"><br><br>
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" id="repeatpassword" placeholder="Repeat Password" name="repeatpassword"><br><br>
+        <div class="clearfix">
+            <button type="submit"  id="SignUpBtn" value="Submit"> Sign Up </button>
+
+        </div>
+
+    </div>
+    </form>
+</body>
+</html>

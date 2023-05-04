@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+		<link rel = "stylesheet" type = "text/css" href = "./style/style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+        <script src="https://kit.fontawesome.com/9a4c809e35.js" crossorigin="anonymous"></script>
+</head>
+	<body>
+		<nav class="navtop">
+			<div>
+            	<a href="/"><h1>BSU Bank</h1></a>
+				<a href="/login"><i class="fa-regular fa-user"></i>Log In</a>
+                <a href="/register"><i class="fa-solid fa-user-plus"></i>Sign Up</a>
+
+			</div>
+		</nav>
+	{{#if failedmessage}}
+		<div class="alert alert-danger">{{failedmessage}}</div>
+	{{/if}}
+	{{#if errormessage}}
+		<div class="alert alert-danger">{{errormessage}}</div>
+	{{/if}}
+	<div class="login">
+            <h1>Login</h1>
+
+
+	<form name= "user_form" action="/login" method="POST">
+		 <label for="username"> <i class="fas fa-user"></i> </label>
+			<input type="text" placeholder="Username" name="email" required>
+			<br>
+		<label for="password"> <i class="fas fa-lock"></i> </label>
+			<input type="password" name="password" placeholder="Password" id="password" required>
+		<input type="checkbox" onclick="myFunction()">Show Password
+		
+		<button type="submit">Login</button>
+		<span action="resetpassword.js" class="password">Forgot <a href="/forgotpass">Password?</a></span>
+	</div>
+	</form>
+
+</body>
+<script>
+	function myFunction() {
+                var x = document.getElementById("password");
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+                }
+</script>
+
+</html>

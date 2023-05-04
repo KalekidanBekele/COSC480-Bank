@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Transactions</title>
+		<link href="./style/style.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+		<script src="https://kit.fontawesome.com/9a4c809e35.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<nav class="navtop">
+			<div>
+				<h1>BSU Bank</h1>
+					<a href="/home"><i class="fa-solid fa-house-user"></i><u>Home</u></a>
+					<a href="/transfer"><i class="fa-solid fa-money-bill-transfer"></i>Transfer</a>
+					<a href = "/transaction"><i class="fa-solid fa-money-check-dollar"></i>Transactions</a>
+					<a href="#"><i class="fa-solid fa-user"></i>{{user.firstName}}</a>
+					<a href="/logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
+			</div>
+		</nav>
+		<div class="content">
+			<h2>Transactions</h2>
+                <p>List of transactions.</p>
+					<link href="./style/table.css" rel="stylesheet" type="text/css">
+
+					<div class="card-body">
+					<div class="container-fluid">
+						<table class="table table-bordered table-stripped" id="indi-list">
+							<thead>
+								<tr>
+									<th class="text-center">#</th>
+									<th>Date Created</th>
+									<th>Transaction</th>
+									<th>Amount</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+		</div>
+        
+</body>
+</body>
+</html>

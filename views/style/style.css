@@ -1,0 +1,338 @@
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0 18px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    display: flex;
+  }
+  button {
+    background-color: #cd8810;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  button:hover {
+    opacity:1;
+  }
+  @media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+.backimg {
+    background-image: url('img/bsu-pattern-thumbnail.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+.container {
+    padding: 16px;
+    width: 400px;
+    height: 400px;
+    background-color: #FAA718;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    margin: 100px auto;
+  }
+  h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 22px;
+    padding: 5px;
+    text-align: center;
+  }
+body {
+    background-image: url('img/bsu-pattern-thumbnail.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-color: #121212;
+    margin: 0;
+}
+.login {
+    width: 376px;
+    background-color: #FCAB1B;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    margin: 100px auto;
+    height: fit-content;
+}
+.login h1 {
+    text-align: center;
+    color: #121212;
+    font-size: 30px;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #121212;
+}
+.login form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+    height: 300px;
+}
+.login form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #FCAB1B;
+    color: #121212;
+}
+.login form input[type="password"], .login form input[type="text"] {
+    width: 310px;
+    height: 50px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+.login form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+   margin-top: 20px;
+    background-color: #fcab1b;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #121212;
+}
+.login form input[type="submit"]:hover {
+  opacity:6;
+  background-color: #cd8810;
+}
+
+
+
+
+.navtop {
+	background-color: #121212;
+	height: 73px;
+	width: 100%;
+	/* top: 0; */
+	display: flex;
+	flex-wrap: wrap;
+	box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+	/* padding: -20px; */
+}
+.navtop a {
+	text-decoration: none;
+    color: inherit;
+    padding-right: 26px;
+    font-size: 16px; 
+    color: white; 
+}
+.navtop b {
+    padding-right: 40px;
+}
+.list {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+#toggler,
+.navtop label {
+    display: none;
+}
+@media screen and
+(max-width: 600px) {
+    .menu {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+    .list {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .navtop label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    #toggler:checked ~ .menu {
+        max-height: 100%;
+    }
+}
+.navtop div {
+	display: flex;
+	margin: 0 auto;
+	/* width: 1000px; */
+	height: 100%;
+}
+.navtop div h1, .navtop div a {
+	display: inline-flex;
+	align-items: center;
+}
+.navtop div h1 {
+	/* flex: 1; */
+	font-size: 24px;
+	padding: -16px;
+	margin: -2px;
+	width: 213px;
+	color: #eaebed;
+	font-weight: normal;
+	/* padding-left: -54px; */
+	padding-right: 4px;
+}
+.navtop div a {
+	padding: 26px;
+	text-decoration: none;
+	color: #c1c4c8;
+	font-weight: bold;
+	padding-right: 50px;
+	text-align: center;
+	float: left;
+	display: block;
+}
+.navtop div a:hover {
+  opacity: .76;
+}
+.navtop div a.active {
+  color: white;
+}
+.navtop div b {
+    padding: 20px;
+	text-decoration: none;
+    color: #121212;
+	font-weight: bold;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+.navtop div a i {
+	padding: 2px 8px 0 0;
+}
+.navtop div a:hover {
+	color: #eaebed;
+	opacity: .82;
+}
+body.loggedin {
+	background-color: #f3f4f7;
+  padding-top: 8px;
+  
+}
+.content {
+	width: 1000px;
+	margin: 0 auto;
+}
+.content h2 {
+	margin: 11px;
+	padding: 28px 29px;
+	font-size: 28px;
+	border-bottom: 0px solid #e0e0e3;
+	color: #121212;
+}
+.content > p, .content > div {
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+	margin: 17px 0;
+	padding: 10px;
+	background-color: #fff;
+}
+.content > p table td, .content > div table td {
+	padding: 5px;
+}
+.content > p table td:first-child, .content > div table td:first-child {
+	font-weight: bold;
+	color: #121212;
+	padding-right: 15px;
+}
+.content > div p {
+	padding: 5px;
+	margin: 0 0 10px 0;
+}
+.containInfo {
+  width: 100%;
+  height: fit-content;
+  background-color: #f3f4f6;
+
+}
+.containInfo > h2 {
+  font-size: 25px;
+  padding: 3px;
+  margin: 15px;
+  padding-left: 70px;
+}
+
+
+.ContainUserData
+{
+    width: 443px;
+    height: fit-content;
+    padding: 19px;
+    background-color: rgb(255, 255, 255);
+    margin: 0px auto;
+    position: center;
+    border-radius: 24px;
+    margin-top: 21px;
+}
+.ContainProfile
+{
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+}
+.flexborder {
+  background: #F9A618;
+
+  flex-wrap:wrap;
+  justify-content: center;
+  align-items:center;
+  margin: 0 auto;
+  border-radius:2px;
+  float: left;
+  width: 48%;
+  padding: 10px;
+}
+.element-right {
+  display: flex;
+  flex-direction:column;
+  justify-content: right;
+}
+.element-left {
+  display: flex;
+  flex-direction:column;
+  justify-content: left;
+}
+
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: center ;
+  }
+  
+  .alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+  }
+  

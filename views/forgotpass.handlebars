@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <title>Password Reset </title>
+    <link rel = "stylesheet" type = "text/css" href = "./style/forgetpass.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <script src="https://kit.fontawesome.com/9a4c809e35.js" crossorigin="anonymous"></script>
+
+<body>
+    <nav class="navtop">
+	    <div>
+            <a href="/"><h1>BSU Bank</h1></a>
+			<a href="/login"><i class="fa-regular fa-user"></i>Log In</a>
+            <a href="/register"><i class="fa-solid fa-user-plus"></i>Sign Up</a>
+		</div>
+
+	</nav>
+    	{{#if failed}}
+		<div class="alert alert-danger">{{failed}}</div>
+	    {{/if}}
+        {{#if success}}
+		<div class="alert alert-danger">{{success}}</div>
+	    {{/if}}
+        {{#if passwordmessage}}
+		<div class="alert alert-danger">{{passwordmessage}}</div>
+	    {{/if}}
+
+
+    <div class="login">
+        <h1>Password Reset</h1>
+            <center><p><b>Please fill in this form to receive new password.</b></p></center>
+        <form action="/forgotpass" method="post">
+            
+            <label for="username"><i class="fas fa-user"></i></label>
+            <input type="text" placeholder="Email" name="email" id="username"required>
+            
+            <label for="password"><i class="fas fa-lock"></i></label>
+            <input type="password" placeholder="New Password" name="password" id="password" required>
+            
+            <label for="passrepeat"><i class="fas fa-lock"></i></label>
+            <input type="password" placeholder="Repeat Password" name="passrepeat"  id="passrepeat" required>
+
+            <input type="submit" id= "ForgotBtn" name= "submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
