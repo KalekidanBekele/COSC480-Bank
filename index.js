@@ -6,9 +6,11 @@ const User = require('./routes/user');
 const handlebars = require('handlebars');
 const exphbs = require('express-handlebars');
 const flash = require('connect-flash');
+const path = require('path');
 
 const app = express();
 
+app.use(express.static(path.join(__dirname + '../views')));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('views'));
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -326,6 +328,6 @@ app.get('/logout', (req, res) => {
 });
 
 //Start Server
-app.listen(3000, () => {
-    console.log('Server started on port 3000...');
+app.listen( process.env.PORT || 3000, () => {
+    console.log('Server started on port' + this.address().port, app.settings.env);
 });
